@@ -1,51 +1,49 @@
-import React, { useState } from "react";
-import './Sidebar.css'
+import React from "react";
+import './Sidebar.css';
 import { NavLink } from "react-router-dom";
-import Dashboard from "../pages/Dashboard";
+// import { FontAwesomeIcon } from "@fontwesome/react-fontawesome";
+import {FaRegChartBar, FaUserAlt,} from "react-icons/fa";
+
 
 const Sidebar = ({children})=>
 {
-    // const[isOpen,setIsopen]=useState(false);
-    // const toggle = () =>setIsopen(!isOpen);
+
+
+   
     const menuItems=[
         {
-            path:"/",
-            name:"Dashboard",
-            icon:<d/>
+            path:"/Contacts",
+            name:"Contacts",
+            icon:<FaUserAlt/>
         },
         {
-            path:"/contacts",
-            name:"contacts",
-            icon:<d/>
-        },
-        {
-            path:"/chartsAndMaps",
+            path:"/ChartsAndMaps",
             name:"Chart And Maps",
-            icon:<d/>
+            icon:<FaRegChartBar/>
         },
     ]
 
     return(
-        <div className="container">
-            <div  className="sidebar">
-                <div className="top_section">
-                    <h1  className="logo">Logo</h1>
-                    <div className="bars">
+        <>
+            <div className="container">
+                <div  className="sidebar">
+                    <div className="top_section">
+                        <h1  className="logo">Contact Managment App</h1>
+                        
                         
                     </div>
-                    
+                    {
+                        menuItems.map((item, index)=>(
+                            <NavLink to={item.path} key={index} className="link" activeclassName="active">
+                                <div className="icon">{item.icon}</div>
+                                <div className="link_text" id="linktext">{item.name}</div>
+                            </NavLink> 
+                        ))
+                    }
                 </div>
-                {
-                    menuItems.map((item, index)=>(
-                        <NavLink to={item.path} key={index} className="link" activeclassName="active">
-                            <div className="icon">{item.icon}</div>
-                            <div className="link_text">{item.name}</div>
-                        </NavLink> 
-                    ))
-                }
+                <main>{children}</main>
             </div>
-            <main>{children}</main>
-        </div>
+        </>
     );
 };
 

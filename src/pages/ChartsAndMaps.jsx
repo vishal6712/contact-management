@@ -4,7 +4,7 @@ const ChartsAndMaps = () =>
 {
     return(
         <div>
-            <h1>charts and maps</h1>
+            <h1 className="page_name">Charts And Maps</h1>
         </div>
     );
 };
