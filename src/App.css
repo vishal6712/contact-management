@@ -6,6 +6,10 @@
   background-color:rgb(220, 226, 236);
   
 }
+#outer-card
+{
+  padding: 0;
+}
 .container{
   display: flex;
   padding: 0px;
@@ -37,7 +41,7 @@ main{
   display:flex;
   align-items: center;
   padding: 20px 15px;
-  background-color: aqua;
+  background-color: rgb(85, 98, 98);
 }
 .logo
 {

@@ -1,0 +1,86 @@
+
+.Information-form
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #fff;
+    padding: 5px;
+    
+}
+#input-form
+{
+    padding: 0;
+}
+.input-field
+{
+    margin: -10px;
+    font-weight: bold;
+    font-size: large;
+    display: block;
+    background-color: #fff;
+}
+.input-field input
+{
+    background-color: inherit;
+    color:rgb(40, 99, 134) ;
+    font: inherit;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid;
+    text-align: left;
+    font-size: 20px;
+    width:25vh ;
+}
+.input-field label
+{
+    display: flexbox;
+    color: rgb(122, 122, 122);
+    background-color:#fff;
+}
+#inputs
+{
+    margin-top:0px ;
+    background-color: #fff;
+    width: 320px;
+}
+#selects
+{
+    margin-top: 30px;
+    text-align: left;
+    background-color: #fff;
+    width: 330px;
+
+    
+}
+#status
+{
+    margin-left:25px ;
+}
+.new-data__actions
+{
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 0;
+}
+#submit-action
+{
+    margin-top: 20px;
+    width:100% ;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 15px;
+}
+#submit-action:hover
+{
+    background-color: rgb(100, 111, 129);
+}
+@media  (max-width:600px) {
+
+    #submit-action
+    {
+        width: 50%;
+    }
+    
+}
