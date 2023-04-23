@@ -40,7 +40,7 @@ const ContactForm = (props) =>
                 status:enteredStatus,
 
             };
-            props.onSaveInformation(enteredData);
+            // props.onSaveInformation(enteredData);
             console.log(enteredData);
             
 
@@ -62,15 +62,15 @@ const ContactForm = (props) =>
                     <div id="inputs">
                         <div className="input-field">
                             <label htmlFor="first-name" >First Name: </label>
-                            <input type="text"  name="first-name" id="first-name" value={enteredFirstName} onChange={firstChangeHandler} />
+                            <input type="text"  name="first-name" id="first-name" value={enteredFirstName} onChange={firstChangeHandler} required />
                         </div>
                         <div className="input-field">
                             <label htmlFor="last-name">Last Name: </label>
-                            <input type="text" name="last-name" id="last-name" value={enteredLastName} onChange={lastChangeHandler}/>
+                            <input type="text" name="last-name" id="last-name" value={enteredLastName} onChange={lastChangeHandler} required/>
                         </div>
                         <div className="input-field">
                             <label htmlFor="mob-number">Mobile No.: </label>
-                            <input type="number" name="mobile number" id="mob-number" value={enteredMobNumber} onChange={mobChangeHandler}/>
+                            <input type="number" name="mobile number" id="mob-number" value={enteredMobNumber} onChange={mobChangeHandler} required/>
                         </div>
                         <div className="input-field" id="selects">
                             <label htmlFor="status" >Status:</label>
