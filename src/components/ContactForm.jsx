@@ -1,7 +1,5 @@
 import React,{useState} from "react";
-import './ContactForm.css';
-// import NewContact from "./NewContact"; 
-
+import './ContactForm.css'; 
 
 const ContactForm = (props) =>
 {
@@ -33,14 +31,15 @@ const ContactForm = (props) =>
         {
             event.preventDefault();
 
-            var enteredData={
+            let enteredData={
                 first:enteredFirstName,
                 last:enteredLastName,
                 mob:enteredMobNumber,
                 status:enteredStatus,
 
             };
-            // props.onSaveInformation(enteredData);
+            props.onSaveInformation(enteredData);
+            
             console.log(enteredData);
             
 
@@ -76,8 +75,8 @@ const ContactForm = (props) =>
                             <label htmlFor="status" >Status:</label>
                             <select className="status-field" id="status" name="status" value={enteredStatus} onChange={statusChangeHandler}>
                                 <option value={'select'}>Select</option>
-                                <option value={"active"}>Active</option>
-                                <option value={"inactive"}>Inactive</option>
+                                <option value={"Active"}>Active</option>
+                                <option value={"Inactive"}>Inactive</option>
                             </select>
                         </div>
                     </div>
@@ -85,9 +84,10 @@ const ContactForm = (props) =>
                         <button type="submit" id="submit-action" >Add Contact</button>
                     </div>
                 </form>
-
-                {/* <div className="content" dangerouslySetInnerHTML={{__html: firstName}}></div> */}
+                
+                
             </div>
+            
         </div>
     );
 };

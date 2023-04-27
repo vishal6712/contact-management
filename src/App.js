@@ -4,9 +4,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Contacts from "./pages/Contacts";
 import ChartsAndMaps from "./pages/ChartsAndMaps";
-// import NewContact from "./components/NewContact/NewContact";
-import ContactForm from "./components/ContactForm";
-import NewContact from "./components/NewContact";
 
 
 let DUMMY_INFORMATION=[
@@ -17,20 +14,20 @@ let DUMMY_INFORMATION=[
     mob:8600843351,
     status:'Active',
   },
-  {
-    id:'2',
-    first:'Shivaji',
-    last:'Suryavanshi',
-    mob:9561000802,
-    status:'Active',
-  },
-  {
-    id:'3',
-    first:'Minakshi',
-    last:'Kadam',
-    mob:8600843351,
-    status:'Inactive',
-  },
+  // {
+  //   id:'2',
+  //   first:'Vilas',
+  //   last:'Kadam',
+  //   mob:9561000802,
+  //   status:'Active',
+  // },
+  // {
+  //   id:'3',
+  //   first:'Minakshi',
+  //   last:'Kadam',
+  //   mob:8600843351,
+  //   status:'Inactive',
+  // },
 
 ];
 
@@ -43,6 +40,8 @@ const App=(props)=>
 
     const updatedInformation=[...Information,newInformation];
     setInformation(updatedInformation);
+
+    console.log(newInformation);
   };
 
   
@@ -52,14 +51,11 @@ const App=(props)=>
       <BrowserRouter>
         <Sidebar>
           <Routes>
-            <Route path="/contacts" element={<Contacts onSaveInformation={addInformationHandler} />}/>
+            <Route path="/contacts" element={<Contacts onAddInformation={addInformationHandler} allData={Information} />}/>
             <Route path="/chartsAndMaps" element={<ChartsAndMaps/>}/>
           </Routes>
         </Sidebar>
       </BrowserRouter>
-      
-      {/* <NewContact onAddInformation={addInformationHandler}/> */}
-      
     </div>
   );
 

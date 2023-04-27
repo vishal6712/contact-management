@@ -1,0 +1,62 @@
+.header
+{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    /* font-size: larger; */
+}
+.card
+{
+    display: flex;
+    text-align: left;
+    float: left;
+    margin: 10px;
+    background: azure;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+    flex-wrap: wrap;
+}
+#image
+{
+    display: flex;
+    justify-content: center;
+
+}
+#contact-img
+{
+    height: 140px;
+    width: 140px;
+    
+}
+.edit-buttons
+{
+    background-color:rgba(104, 224, 180, 0.755);
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    height: 40px;
+    width: 50px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+.delete-buttons
+{
+    background-color:rgba(255, 31, 31, 0.573);
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    height: 40px;
+    width: 80px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+.edit-buttons:hover, .delete-buttons:hover
+{
+    background-color: rgba(0, 0, 0, 0.182);
+}
+@media screen and (max-width:800px)
+{
+    .card{
+        
+        height: 217px;
+        width: 100%;
+    }
+}
