@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 import './ContactForm.css'; 
 
 const ContactForm = (props) =>
@@ -25,30 +25,40 @@ const ContactForm = (props) =>
         {
             setEnteredStatus(event.target.value);
         };
-
-
         const submitHandler=(event)=>
         {
             event.preventDefault();
 
-            let enteredData={
+            var enteredData={
                 first:enteredFirstName,
                 last:enteredLastName,
                 mob:enteredMobNumber,
                 status:enteredStatus,
 
             };
-            props.onSaveInformation(enteredData);
-            
             console.log(enteredData);
-            
+            // let serialisedData=JSON.stringify(enteredData);
+            // let getLocalEnteredData=JSON.parse(localStorage.getItem("inputValues"));
+            props.onSaveInformation(enteredData);
 
+    
 
             setEnteredFirstName('');
             setEnteredLastName('');
             setEnteredMobNumber('');
             setEnteredStatus('');
         };
+
+        // useEffect(()=>
+        //     {
+        //         const formData=localStorage.getItem("inputValues");
+        //         props.onSaveInformation(JSON.parse(formData));
+        //     },[])
+
+        // useEffect(()=>
+        //     {
+        //         localStorage.setItem("inputValues",JSON.stringify(enteredData));
+        //     },[enteredData])
     
 
     return(
