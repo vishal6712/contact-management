@@ -85,6 +85,11 @@ main{
   font-size: 25px;
   background-color:#f8f9fb;
 }
+.heading1
+{
+  color: rgb(86, 92, 98);
+  text-decoration: underline yellow;
+}
 
 @media screen and (max-width:600px) {
 

@@ -52,6 +52,7 @@ const ChartsAndMaps = () =>
   return (
     <div>
         <h1 className="page_name">Charts And Maps</h1>
+        <h2 className="heading1">Corona Cases Chart :</h2>
       <Line data={chartData}></Line>
     </div>
   );
