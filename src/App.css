@@ -74,6 +74,7 @@ main{
 }
 .active{
   /* background:#e5e9f0; */
+/*before*/
   color: rgba(0, 214, 143, 0.758);
 }
 :hover.active
